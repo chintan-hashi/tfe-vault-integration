@@ -3,11 +3,17 @@ data "vault_azure_access_credentials" "creds" {
   backend = "azure"
 }
 
-output "azure_clientid" {
-  value = data.vault_azure_access_credentials.creds.client_id
+provider "azurerm" {
+  features {}
+  client_id       = data.vault_azure_access_credentials.creds.client_id
+  client_secret   = data.vault_azure_access_credentials.creds.client_secret
 }
 
-output "azure_clientsecret" {
-  value = data.vault_azure_access_credentials.creds.client_secret
-  sensitive = true
+resource "azurerm_resource_group" "myresourcegroup" {
+  name     = "cgosaliavaultdemo"
+  location = us-west-2
+
+  tags = {
+    environment = "Production"
+  }
 }
