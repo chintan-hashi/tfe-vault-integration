@@ -5,7 +5,6 @@ data "vault_azure_access_credentials" "creds" {
 
 provider "azurerm" {
   features {}
-  use_cli = false
 }
 
 resource "azurerm_resource_group" "myresourcegroup" {
