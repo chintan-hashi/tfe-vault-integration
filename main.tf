@@ -3,7 +3,7 @@ data "vault_azure_access_credentials" "creds" {
   backend = "azure"
 }
 
-provider "azure" {
+provider "azurerm" {
   features {}
   use_cli = false
 }
