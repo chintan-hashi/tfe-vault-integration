@@ -8,11 +8,11 @@ provider "azurerm" {
   use_cli = false
 }
 
-#resource "azurerm_resource_group" "myresourcegroup" {
-#  name     = "cgosaliavaultdemo"
-#  location = "us-west-2"
+resource "azurerm_resource_group" "myresourcegroup" {
+  name     = "cgosaliavaultdemo"
+  location = "us-west-2"
 
-#  tags = {
-#    environment = "Production"
-#  }
-#}
+  tags = {
+    environment = "Production"
+  }
+}
