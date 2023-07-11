@@ -3,15 +3,15 @@ data "vault_azure_access_credentials" "creds" {
   backend = "azure"
 }
 
-provider "azurerm" {
+provider "azure" {
   features {}
 }
 
-resource "azurerm_resource_group" "myresourcegroup" {
-  name     = "cgosaliavaultdemo"
-  location = "us-west-2"
+#resource "azurerm_resource_group" "myresourcegroup" {
+#  name     = "cgosaliavaultdemo"
+#  location = "us-west-2"
 
-  tags = {
-    environment = "Production"
-  }
-}
+#  tags = {
+#    environment = "Production"
+#  }
+#}
