@@ -10,7 +10,7 @@ provider "azurerm" {
 
 resource "azurerm_resource_group" "myresourcegroup" {
   name     = "cgosaliavaultdemo"
-  location = "us-west-2"
+  location = "westus2"
 
   tags = {
     environment = "Production"
